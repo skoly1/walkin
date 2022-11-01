@@ -67,12 +67,9 @@ const verifyOtp = (mobilenumber, otp) => {
     });
   });
   req.end();
-
-  const body = Buffer.concat(chunks);
 };
 
 app.post("/api/otp", (request, response) => {
-  console.log(request.body);
   const mobilenumber = request.body.mobilenumber;
   const otp = request.body.otp;
 
